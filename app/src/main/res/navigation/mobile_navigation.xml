@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.it18.stories.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_gallery"
+            app:destination="@id/nav_gallery" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.it18.stories.ui.gallery.GalleryFragment"
+        android:label="Story 1"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_nav_gallery_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.it18.stories.ui.slideshow.SlideshowFragment"
+        android:label="Story 2"
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_nav_slideshow_to_story3"
+            app:destination="@id/story3" />
+    </fragment>
+    <fragment
+        android:id="@+id/story3"
+        android:name="com.it18.stories.ui.myFragments.story3"
+        android:label="Story 3"
+        tools:layout="@layout/fragment_story3" >
+        <action
+            android:id="@+id/action_story3_to_story4"
+            app:destination="@id/story4" />
+    </fragment>
+    <fragment
+        android:id="@+id/story4"
+        android:name="com.it18.stories.ui.myFragments.story4"
+        android:label="Story 4"
+        tools:layout="@layout/fragment_story4" >
+        <action
+            android:id="@+id/action_story4_to_story5"
+            app:destination="@id/story5" />
+    </fragment>
+    <fragment
+        android:id="@+id/story5"
+        android:name="com.it18.stories.ui.myFragments.story5"
+        android:label="Story 5"
+        tools:layout="@layout/fragment_story5" >
+        <action
+            android:id="@+id/action_story5_to_story6"
+            app:destination="@id/story6" />
+    </fragment>
+    <fragment
+        android:id="@+id/story6"
+        android:name="com.it18.stories.ui.myFragments.story6"
+        android:label="Story 6"
+        tools:layout="@layout/fragment_story6" />
+</navigation>
